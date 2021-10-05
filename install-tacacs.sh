@@ -7,15 +7,47 @@ echo "#######################################"
 echo ' Will install Tacacs and it dependecies'
 echo "#######################################"
 
-wait 10
 
 echo "##############################################################################"
-echo 'Install dependecies, gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev'
+echo "Run update and upgrade"
 echo "##############################################################################"
+sudo apt-get update && sudo apt-get upgrade -y
+
+sleep 5
+
+echo "##############################################################################"
+echo "Install this package:
+perl 
+build-essential 
+libnet-ldap-perl 
+libnet-ssleay-perl 
+libauthen-pam-perl 
+libpam-runtime 
+libio-pty-perl 
+libbind-dev 
+libssl-dev 
+libpcre3-dev 
+libpcre++-dev 
+libfreeradius-dev 
+libfreeradius-client-dev 
+zlib1g-dev 
+libgcrypt20-dev 
+libcurl4-openssl-dev 
+libpam0g-dev 
+ibsctp-dev 
+libevent-dev
+"
+echo "##############################################################################"
+
+sudo apt-get install -y perl build-essential libnet-ldap-perl libnet-ssleay-perl libauthen-pam-perl libpam-runtime libio-pty-perl libbind-dev libssl-dev libpcre3-dev libpcre++-dev libfreeradius-dev libfreeradius-client-dev zlib1g-dev libgcrypt20-dev libcurl4-openssl-dev libpam0g-dev libsctp-dev libevent-dev
+
+#echo "##############################################################################"
+#echo 'Install dependecies, gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev'
+#echo "##############################################################################"
 
 sleep 10
 
-apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev
+#apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev
 
 echo "#############################################################################"
 echo 'Download Tacacs'
@@ -94,5 +126,6 @@ sleep 5
 
 stat --format '%a' /var/log/tac_plus
 
-/usr/local/lib/mavis/mavis_tacplus_ldap.pl < /dev/null
+#/usr/local/lib/mavis/mavis_tacplus_ldap.pl < /dev/null
+
 
