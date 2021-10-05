@@ -1,0 +1,3 @@
+-- Startup of the manager took 67296 microseconds.
+Oct 05 14:46:19 onn-auth-01 sudo[1165]: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Oct 05 14:46:22 onn-auth-01 sudo[1165]: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
