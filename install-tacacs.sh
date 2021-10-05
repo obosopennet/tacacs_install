@@ -60,7 +60,7 @@ sleep 10
 #apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev
 
 echo "#############################################################################"
-echo 'Go to home temp'
+echo 'Go to home PROJECTS'
 echo '#############################################################################'
 
 cd /PROJECTS
@@ -73,7 +73,7 @@ echo '##########################################################################
 
 sleep 5
 
-wget -P /temp https://www.pro-bono-publico.de/projects/src/$devfile
+wget https://www.pro-bono-publico.de/projects/src/$devfile
 
 
 echo "#############################################################################"
@@ -86,7 +86,7 @@ tar xjvf $devfile
 
 sleep 5
 
-cd /temp/PROJECTS
+cd /PROJECTS
 
 echo "#############################################################################"
 echo "Welcome to PROJECTS folder"
