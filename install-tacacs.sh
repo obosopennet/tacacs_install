@@ -141,10 +141,11 @@ sleep 10
 echo "#############################################################################"
 echo "Copy tac_plus configuration file."
 echo '#############################################################################'
-#cd /usr/local/etc
-#touch tac_plus.cfg
-#chmod 755 tac_plus.cfg
-#nano tac_plus.cfg
+
+cp ~/tacacs_install/tac_plus.cfg /usr/local/etc/
+chmod 755 tac_plus.cfg /usr/local/etc/tac_plus.cfg
+
+
 sleep 5
 
 echo "#############################################################################"
