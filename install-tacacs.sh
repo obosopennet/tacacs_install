@@ -1,5 +1,11 @@
 #!/bin/sh
 
+## Log to logile
+exec 3>&1 4>&2
+trap 'exec 2>&4 1>&3' 0 1 2 3
+exec 1>log.out 2>&1
+
+
 devfile=DEVEL.202109260929.tar.bz2
 configure=./configure tac_plus mavis --with-pam=/usr/include/security --with-ssl --with-pcre --with-lwres --with-sctp
 
