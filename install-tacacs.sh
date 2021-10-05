@@ -86,7 +86,7 @@ tar xjvf $devfile
 
 sleep 5
 
-cd PROJECTS
+cd /temp/PROJECTS
 
 echo "#############################################################################"
 echo "Welcome to PROJECTS folder"
