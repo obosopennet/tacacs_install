@@ -1,8 +1,8 @@
 Temp_File:
 
-apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl1.0-dev
+apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev
 
-echo "NOTE: THIS WILL NOT BUILD WITHOUT 'libssl 1.0' installed!"
+echo "NOTE: THIS WILL NOT BUILD WITHOUT 'libssl' installed!"
 cd ~
 
 wget http://www.pro-bono-publico.de/projects/src/DEVEL.201908261951.tar.bz2
