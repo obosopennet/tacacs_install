@@ -57,10 +57,10 @@ sleep 10
 #apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev
 
 echo "#############################################################################"
-echo 'Go to home directory'
+echo 'Go to home temp'
 echo '#############################################################################'
 
-cd ~
+cd /temp
 
 sleep 5
 
@@ -70,7 +70,7 @@ echo '##########################################################################
 
 sleep 5
 
-wget https://www.pro-bono-publico.de/projects/src/$devfile
+wget -P /temp https://www.pro-bono-publico.de/projects/src/$devfile
 
 
 echo "#############################################################################"
