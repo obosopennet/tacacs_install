@@ -10,7 +10,7 @@ rm /var/lib/apt/lists/* -vf
 apt-get clean
 
 devfile=DEVEL.202109260929.tar.bz2
-configure=./configure tac_plus mavis --with-pam=/usr/include/security --with-ssl --with-pcre2 --with-lwres --with-sctp
+configure=./configure tac_plus mavis --with-pam=/usr/include/security --with-ssl --with-pcre --with-lwres --with-sctp
 
 echo "#######################################"
 echo ' Will install Tacacs and it dependecies'
