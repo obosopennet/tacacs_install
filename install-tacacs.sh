@@ -153,7 +153,7 @@ echo "##########################################################################
 echo "Copy tac_plus configuration file."
 echo '#############################################################################'
 
-cp ~/tacacs_install/tac_plus.cfg /usr/local/etc/
+cp ~/PROJECTS/tac_plus/sample/tac_plus.cfg /usr/local/etc/
 chmod 755 tac_plus.cfg /usr/local/etc/tac_plus.cfg
 
 
@@ -170,3 +170,4 @@ chown root:root /etc/init.d/tac_plus
 update-rc.d tac_plus defaults
 service tac_plus start
 
+journalctl -xe
