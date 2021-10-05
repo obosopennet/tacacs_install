@@ -1,0 +1,17 @@
+Temp_File:
+
+apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl1.0-dev
+
+echo "NOTE: THIS WILL NOT BUILD WITHOUT 'libssl 1.0' installed!"
+cd ~
+
+wget http://www.pro-bono-publico.de/projects/src/DEVEL.201908261951.tar.bz2
+tar xvfj DEVEL.201908261951.tar.bz2
+rm -rf DEVEL.201908261951.tar.bz2
+
+cd PROJECTS
+
+ln -s /usr/include/security ./pam
+
+./configure tac_plus mavis --prefix=/opt/tacacsgui --with-pam=/usr/include/security --with-ssl --with-pcre --with-lwres --with-sctp
+make && make install
