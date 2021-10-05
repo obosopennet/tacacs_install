@@ -60,7 +60,7 @@ sleep 10
 #apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev
 
 echo "#############################################################################"
-echo 'Go to home PROJECTS'
+echo 'Go to home'
 echo '#############################################################################'
 
 cd /PROJECTS
