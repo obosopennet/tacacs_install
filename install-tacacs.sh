@@ -50,10 +50,18 @@ sleep 10
 #apt-get install gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev
 
 echo "#############################################################################"
+echo 'Go to home directory'
+echo '#############################################################################'
+
+cd ~
+
+sleep 5
+
+echo "#############################################################################"
 echo 'Download Tacacs'
 echo '#############################################################################'
 
-sleep 10
+sleep 5
 
 wget https://www.pro-bono-publico.de/projects/src/$devfile
 
@@ -62,7 +70,7 @@ echo "##########################################################################
 echo 'Untar' $devfile
 echo '#############################################################################'
 
-sleep 20
+sleep 5
 
 tar xjvf $devfile
 
@@ -126,6 +134,27 @@ sleep 5
 
 stat --format '%a' /var/log/tac_plus
 
-#/usr/local/lib/mavis/mavis_tacplus_ldap.pl < /dev/null
+/usr/local/lib/mavis/mavis_tacplus_ldap.pl < /dev/null
 
+sleep 10
+
+echo "#############################################################################"
+echo "Copy tac_plus configuration file."
+echo '#############################################################################'
+#cd /usr/local/etc
+#touch tac_plus.cfg
+#chmod 755 tac_plus.cfg
+#nano tac_plus.cfg
+sleep 5
+
+echo "#############################################################################"
+echo "Create a service daemon for tac_plus."
+echo '#############################################################################'
+
+cd /etc/init.d
+cp ~/PROJECTS/tac_plus/extra/etc_init.d_tac_plus /etc/init.d/tac_plus
+schmod 755 /etc/init.d/tac_plus
+chown root:root /etc/init.d/tac_plus
+update-rc.d tac_plus defaults
+service tac_plus start
 
