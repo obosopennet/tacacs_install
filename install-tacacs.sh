@@ -154,7 +154,7 @@ echo "Copy tac_plus configuration file."
 echo '#############################################################################'
 
 cp ~/PROJECTS/tac_plus/sample/tac_plus.cfg /usr/local/etc/
-chmod 755 tac_plus.cfg /usr/local/etc/tac_plus.cfg
+chmod 755 /usr/local/etc/tac_plus.cfg
 
 
 sleep 5
