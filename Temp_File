@@ -15,3 +15,8 @@ ln -s /usr/include/security ./pam
 
 ./configure tac_plus mavis --with-pam=/usr/include/security --with-ssl --with-pcre --with-lwres --with-sctp
 make && make install
+
+
+sudo rm /var/lib/apt/lists/* -vf
+sudo apt-get clean
+sudo apt-get update
