@@ -103,10 +103,10 @@ ln -s /usr/include/security ./pam
 
 
 echo "#############################################################################"
-echo "Run ./Configure with parameters"
+echo "Run ./Configure with parameters" $configure
 echo '#############################################################################'
 
-$configure
+./configure tac_plus mavis --with-pam=/usr/include/security --with-ssl --with-pcre --with-lwres --with-sctp
 
 sleep 5
 
@@ -168,7 +168,22 @@ cp ~/PROJECTS/tac_plus/extra/etc_init.d_tac_plus /etc/init.d/tac_plus
 chmod 755 /etc/init.d/tac_plus
 chown root:root /etc/init.d/tac_plus
 update-rc.d tac_plus defaults
+
+echo "#############################################################################"
+echo "starting tac_plus.service."
+echo '#############################################################################'
+
 service tac_plus start
 
-journalctl -xe
-q
+sleep 5
+
+echo "#############################################################################"
+echo "Create usergroups."
+echo '#############################################################################'
+
+$group1
+
+
+#only for Debugging
+#journalctl -xe
+
