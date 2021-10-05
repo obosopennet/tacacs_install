@@ -152,7 +152,7 @@ echo "##########################################################################
 echo "Copy tac_plus configuration file."
 echo '#############################################################################'
 
-cp temp/tacacs_install/tac_plus.cfg /usr/local/etc/
+cp ~/tacacs_install/tac_plus.cfg /usr/local/etc/
 chmod 755 tac_plus.cfg /usr/local/etc/tac_plus.cfg
 
 
