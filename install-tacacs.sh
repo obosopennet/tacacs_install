@@ -153,7 +153,7 @@ echo '##########################################################################
 
 cd /etc/init.d
 cp ~/PROJECTS/tac_plus/extra/etc_init.d_tac_plus /etc/init.d/tac_plus
-schmod 755 /etc/init.d/tac_plus
+chmod 755 /etc/init.d/tac_plus
 chown root:root /etc/init.d/tac_plus
 update-rc.d tac_plus defaults
 service tac_plus start
