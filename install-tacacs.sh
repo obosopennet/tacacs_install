@@ -86,7 +86,8 @@ tar xjvf $devfile
 
 sleep 5
 
-cd /PROJECTS
+#cd ~/tacacs_install/PROJECTS/
+cd ~/PROJECTS/
 
 echo "#############################################################################"
 echo "Welcome to PROJECTS folder"
