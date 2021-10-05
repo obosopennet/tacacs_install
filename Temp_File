@@ -13,5 +13,5 @@ cd PROJECTS
 
 ln -s /usr/include/security ./pam
 
-./configure tac_plus mavis --prefix=/opt/tacacsgui --with-pam=/usr/include/security --with-ssl --with-pcre --with-lwres --with-sctp
+./configure tac_plus mavis --with-pam=/usr/include/security --with-ssl --with-pcre --with-lwres --with-sctp
 make && make install
