@@ -171,3 +171,4 @@ update-rc.d tac_plus defaults
 service tac_plus start
 
 journalctl -xe
+q
