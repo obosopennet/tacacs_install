@@ -17,6 +17,8 @@ sleep 5
 
 echo "##############################################################################"
 echo "Install this package:
+gcc 
+make
 perl 
 build-essential 
 libnet-ldap-perl 
@@ -38,7 +40,7 @@ libevent-dev
 "
 echo "##############################################################################"
 
-sudo apt-get install -y perl build-essential libnet-ldap-perl libnet-ssleay-perl libauthen-pam-perl libpam-runtime libio-pty-perl libbind-dev libssl-dev libpcre3-dev libpcre++-dev libfreeradius-dev zlib1g-dev libgcrypt20-dev libcurl4-openssl-dev libpam0g-dev libsctp-dev libevent-dev
+sudo apt-get install -y gcc make perl build-essential libnet-ldap-perl libnet-ssleay-perl libauthen-pam-perl libpam-runtime libio-pty-perl libbind-dev libssl-dev libpcre3-dev libpcre++-dev libfreeradius-dev zlib1g-dev libgcrypt20-dev libcurl4-openssl-dev libpam0g-dev libsctp-dev libevent-dev
 
 #echo "##############################################################################"
 #echo 'Install dependecies, gcc make libpcre3-dev libbind-dev libpam0g-dev libssl-dev'
